@@ -20,6 +20,7 @@ jobs:
     
       - name: Set .env for docker-compose
         run: |
+            ip a
             echo 'CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP=1' >> .env
             echo 'POSTGRES_HOST=pgdb' >> .env
             echo 'POSTGRES_DB=postgres' >> .env
